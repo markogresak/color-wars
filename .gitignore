@@ -39,3 +39,4 @@ $RECYCLE.BIN/
 # App specific #
 node_modules/
 .tmp
+dist
