@@ -1,0 +1,43 @@
+{
+  "name": "color-wars",
+  "version": "0.0.1",
+  "description": "Color Wars game",
+  "main": "dist/app.js",
+  "scripts": {
+    "test": "gulp test",
+    "postinstall": "tsd reinstall --overwrite --save"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markogresak/color-wars"
+  },
+  "author": "Marko Grešak <marko@gresak.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markogresak/color-wars/issues"
+  },
+  "homepage": "https://github.com/markogresak/color-wars",
+  "dependencies": {
+    "angular2": "^2.0.0-alpha.20",
+    "express": "^4.12.3",
+    "normalize.css": "^3.0.3",
+    "rtts_assert": "^2.0.0-alpha.20",
+    "socket.io": "^1.3.5",
+    "systemjs": "^0.16.9"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "gulp": "^3.8.11",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-tslint": "^2.0.0",
+    "gulp-typescript": "^2.6.0",
+    "karma": "^0.12.31",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^0.1.10",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "mocha": "^2.2.4",
+    "typescript-loader": "^1.1.3",
+    "webpack": "^1.8.10",
+    "webpack-dev-server": "^1.8.2"
+  }
+}
