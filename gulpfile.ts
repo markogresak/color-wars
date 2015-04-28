@@ -33,3 +33,11 @@ gulp.task("copy-html", () => {
     .pipe(browserSync.reload({ stream: true }));
 });
 
+gulp.task("server", () => {
+  server.start();
+  browserSync.init({
+    proxy: "localhost:" + serverPort,
+    port: 7000
+  });
+});
+
