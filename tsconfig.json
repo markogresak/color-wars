@@ -13,6 +13,7 @@
     "filesGlob": [
         "./src/**/*.ts",
         "!./node_modules/**/*.ts",
+        "!gulpfile.ts"
     ],
     "files": [
         "./src/index.ts",
