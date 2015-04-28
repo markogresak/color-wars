@@ -5,7 +5,7 @@
   "main": "dist/app.js",
   "scripts": {
     "test": "gulp test",
-    "postinstall": "./node_modules/typescript/bin/tsc gulpfile.ts -m commonjs",
+    "postinstall": "tsd reinstall --overwrite --save && ./node_modules/typescript/bin/tsc gulpfile.ts -m commonjs",
     "tsd": "tsd reinstall --overwrite --save"
   },
   "repository": {
