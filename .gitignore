@@ -40,3 +40,5 @@ $RECYCLE.BIN/
 node_modules/
 .tmp
 dist
+tmp
+gulpfile.js
