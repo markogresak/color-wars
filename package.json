@@ -5,8 +5,8 @@
   "main": "dist/app.js",
   "scripts": {
     "test": "gulp test",
-    "postinstall": "tsd reinstall --overwrite --save && ./node_modules/typescript/bin/tsc gulpfile.ts -m commonjs",
-    "tsd": "tsd reinstall --overwrite --save"
+    "postinstall": "npm run-script tsd && ./node_modules/typescript/bin/tsc gulpfile.ts -m commonjs",
+    "tsd": "./node_modules/tsd/build/cli.js reinstall --overwrite --save"
   },
   "repository": {
     "type": "git",
@@ -45,6 +45,7 @@
     "karma-mocha": "^0.1.10",
     "karma-phantomjs-launcher": "^0.1.4",
     "mocha": "^2.2.4",
+    "tsd": "^0.5.7",
     "typescript-require": "^0.2.8"
   },
   "jspm": {
