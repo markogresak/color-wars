@@ -17,12 +17,15 @@
     "gulp/gulp.d.ts": {
       "commit": "00e7f3fede5f2df55b56c72f40a144824f0f0bfa"
     },
+    "express/express.d.ts": {
       "commit": "00e7f3fede5f2df55b56c72f40a144824f0f0bfa"
     },
       "commit": "00e7f3fede5f2df55b56c72f40a144824f0f0bfa"
     },
+    "errorhandler/errorhandler.d.ts": {
       "commit": "00e7f3fede5f2df55b56c72f40a144824f0f0bfa"
     },
+    "vinyl/vinyl.d.ts": {
       "commit": "00e7f3fede5f2df55b56c72f40a144824f0f0bfa"
     },
       "commit": "00e7f3fede5f2df55b56c72f40a144824f0f0bfa"
