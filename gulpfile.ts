@@ -27,3 +27,9 @@ gulp.task("less", () => {
     .pipe(browserSync.reload({ stream: true }));
 });
 
+gulp.task("copy-html", () => {
+  gulp.src(htmlPath)
+    .pipe(gulp.dest("dist/public"))
+    .pipe(browserSync.reload({ stream: true }));
+});
+
