@@ -11,8 +11,8 @@
         "emitDecoratorMetadata": true
     },
     "filesGlob": [
-        "./**/*.ts",
-        "!./node_modules/**/*.ts"
+        "./src/**/*.ts",
+        "!./node_modules/**/*.ts",
     ],
     "files": [
         "./src/index.ts",
