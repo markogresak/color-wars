@@ -12,6 +12,16 @@ var tsServerPath = ["src/*.ts", "src/server/*.ts"];
 var serverPort = process.env.PORT || 3000;
 var server = p.liveServer.new("dist/index.js");
 
+gulp.task("tslint", () => {
+  // Currently disabled because `tslint` doesn't recognize ES6 module imports.
+  return;
+  gulp.src("src/**/*.ts")
+    .pipe(p.tslint())
+    .pipe(p.tslint.report("prose", {
+      emitError: true
+    }));
+});
+
 gulp.task("typescript", () => {
   // Hack until `gulp-typescript` supports projects.
   require('child_process').exec("./node_modules/typescript/bin/tsc -p .");
