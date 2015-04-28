@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- '0.10'
+cache:
+  directories:
+  - node_modules
+env:
+  global:
+  - secure: PGUEuJV+zIPBWZRQRMh7DY3sWQrM0EiuEw04JGnVFim1xbEnO0qJ1olMk4Gbfh3SCxIufW0KFwSDVyaVhe3i/1S5SBQOXcNpCgByCP65kk8q0uu0/DzylX4tyVRxU6gDsR54xi3TUwOpLKjFP/nKZ3Sy7vMLbnSG+pGvexwQx4k=
+  - secure: c37RMXzafeDSYgJ6EJLNJivFplDR59zCC3hWZNtJusCJ7ESOELTtvnQUI4Iu45pYxYLXBFelKiHaOjcmnR6sNTwXTbtyEfCDTXRnMCmvUhX0TMfScsJjhd0y0o0qNT72N+VmP7LV8dq9QCrFo+Zz6ymzRG6iTdya04oOKK3DB2k=
