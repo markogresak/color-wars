@@ -12,6 +12,11 @@ var tsServerPath = ["src/*.ts", "src/server/*.ts"];
 var serverPort = process.env.PORT || 3000;
 var server = p.liveServer.new("dist/index.js");
 
+gulp.task("typescript", () => {
+  // Hack until `gulp-typescript` supports projects.
+  require('child_process').exec("./node_modules/typescript/bin/tsc -p .");
+});
+
 gulp.task("less", () => {
   gulp.src(lessPath)
     .pipe(p.sourcemaps.init())
