@@ -55,3 +55,8 @@ gulp.task("server", () => {
   });
 });
 
+gulp.task("default", ["typescript", "less", "copy-html", "server"], () => {
+  gulp.watch(htmlPath, ["copy-html"]);
+  gulp.watch(lessPath, ["less"]);
+  gulp.watch(tsServerPath, [server.start]);
+});
