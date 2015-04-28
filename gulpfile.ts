@@ -5,7 +5,7 @@ var browserSync = require("browser-sync");
 var p = require("gulp-load-plugins")();
 
 var publicPath = "src/public/**/";
-var htmlPath = publicPath + "*.html";
+var staticPaths = [publicPath + "*.html", publicPath + "*.js"]
 var lessPath = publicPath + "*.less";
 var tsPublicPath = publicPath + "*.ts";
 var tsServerPath = ["src/*.ts", "src/server/*.ts"];
@@ -41,8 +41,8 @@ gulp.task("less", () => {
     .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task("copy-html", () => {
-  gulp.src(htmlPath)
+gulp.task("copy-static", () => {
+  gulp.src(staticPaths)
     .pipe(gulp.dest("dist/public"))
     .pipe(browserSync.reload({ stream: true }));
 });
@@ -55,8 +55,8 @@ gulp.task("server", () => {
   });
 });
 
-gulp.task("default", ["typescript", "less", "copy-html", "server"], () => {
-  gulp.watch(htmlPath, ["copy-html"]);
+gulp.task("default", ["typescript", "less", "copy-static", "server"], () => {
+  gulp.watch(staticPaths, ["copy-static"]);
   gulp.watch(lessPath, ["less"]);
   gulp.watch(tsServerPath, [server.start]);
 });
