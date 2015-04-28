@@ -11,11 +11,7 @@ let mode = process.env.NODE_ENV || "development";
 let nodeModulesPath = path.join(__dirname, "../../node_modules/");
 // Name of modules which will be served publically.
 let publicNodeModules = [
-  "es6-module-loader",
-  "systemjs",
-  "traceur",
   "angular2",
-  "rtts_assert",
   "normalize.css"
 ];
 
