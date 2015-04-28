@@ -52,8 +52,8 @@
     "directories": {
       "baseURL": "dist/public"
     },
-    "configFile": "jspm-config.js",
     "dependencies": {},
+    "configFile": "dist/public/jspm-config.js",
     "devDependencies": {
       "traceur": "github:jmcriffey/bower-traceur@0.0.88",
       "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88"
