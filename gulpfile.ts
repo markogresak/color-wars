@@ -65,6 +65,10 @@ gulp.task("clean", () => {
     .pipe(p.clean());
 });
 
+gulp.task("build", ["typescript", "less", "copy-static"]);
+
+gulp.task("rebuild", ["clean", "build"]);
+
   gulp.watch(staticPaths, ["copy-static"]);
   gulp.watch(lessPath, ["less"]);
   gulp.watch(tsServerPath, [server.start]);
