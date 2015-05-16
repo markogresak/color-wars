@@ -60,7 +60,6 @@ gulp.task("server", () => {
   });
 });
 
-gulp.task("default", ["typescript", "less", "copy-static", "server"], () => {
 gulp.task("clean", () => {
   gulp.src(distPath)
     .pipe(p.plumber(() => {}))
@@ -71,6 +70,7 @@ gulp.task("build", ["typescript", "less", "copy-static"]);
 
 gulp.task("rebuild", ["clean", "build"]);
 
+gulp.task("default", ["build", "server"], () => {
   gulp.watch(staticPaths, ["copy-static"]);
   gulp.watch(lessPath, ["less"]);
   gulp.watch(tsServerPath, [server.start]);
