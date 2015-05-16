@@ -5,12 +5,14 @@ var browserSync = require("browser-sync");
 var p = require("gulp-load-plugins")();
 
 var publicPath = "src/public/**/";
+var distPath = "dist/"
 var staticPaths = [publicPath + "*.html", publicPath + "*.js"]
 var lessPath = publicPath + "*.less";
 var tsPublicPath = publicPath + "*.ts";
 var tsServerPath = ["src/*.ts", "src/server/*.ts"];
 var serverPort = process.env.PORT || 3000;
-var server = p.liveServer.new("dist/index.js");
+var server = p.liveServer.new(distPath + "index.js");
+
 
 gulp.task("tslint", () => {
   // Currently disabled because `tslint` doesn't recognize ES6 module imports.
