@@ -41,4 +41,5 @@ node_modules/
 .tmp
 dist
 tmp
+typings
 gulpfile.js
