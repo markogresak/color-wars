@@ -16,6 +16,7 @@ gulp.task("tslint", () => {
   // Currently disabled because `tslint` doesn't recognize ES6 module imports.
   return;
   gulp.src("src/**/*.ts")
+    .pipe(p.plumber())
     .pipe(p.tslint())
     .pipe(p.tslint.report("prose", {
       emitError: true
@@ -33,6 +34,7 @@ gulp.task("typescript", () => {
 
 gulp.task("less", () => {
   gulp.src(lessPath)
+    .pipe(p.plumber())
     .pipe(p.sourcemaps.init())
     .pipe(p.less())
     .pipe(p.autoprefixer())
@@ -43,6 +45,7 @@ gulp.task("less", () => {
 
 gulp.task("copy-static", () => {
   gulp.src(staticPaths)
+    .pipe(p.plumber())
     .pipe(gulp.dest("dist/public"))
     .pipe(browserSync.reload({ stream: true }));
 });
@@ -58,6 +61,7 @@ gulp.task("server", () => {
 gulp.task("default", ["typescript", "less", "copy-static", "server"], () => {
 gulp.task("clean", () => {
   gulp.src(distPath)
+    .pipe(p.plumber(() => {}))
     .pipe(p.clean());
 });
 
