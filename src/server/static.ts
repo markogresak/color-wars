@@ -16,7 +16,7 @@ let publicNodeModules = [
 
 let app = express();
 // Statically serve public folder.
-app.use(express.static(path.join(__dirname, " ../public")));
+app.use(express.static(path.join(__dirname, "../public")));
 // Statically serve each of specified `publicNodeModules`.
 publicNodeModules.forEach((publicModule) => {
   app.use("/" + publicModule, express.static(path.join(nodeModulesPath, publicModule)));
