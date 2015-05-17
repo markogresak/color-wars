@@ -41,6 +41,10 @@ class Tile {
     this.active = false;
   }
 
+  makeActive() {
+    this.active = true;
+  }
+
 }
 
 bootstrap(ColorWar);

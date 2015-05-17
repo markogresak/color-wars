@@ -2,7 +2,7 @@
 
   <div class="row" *for="#line of tiles">
 
-    <span class="cell" *for="#tile of line">
+    <span class="cell" *for="#tile of line" [class.active]="tile.active" (click)="tile.makeActive()">
       <!-- ({{tile.x}},{{tile.y}}) -->
     </span>
 
