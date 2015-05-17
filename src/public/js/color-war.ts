@@ -1,13 +1,14 @@
 /// <reference path="../../../typings/tsd.d.ts" />
 
-import {Component, View, bootstrap} from "angular2/angular2";
+import {Component, View, bootstrap, For} from "angular2/angular2";
 
 @Component({
   selector: "color-war"
 })
 
 @View({
-  templateUrl: "color-war.html"
+  templateUrl: "color-war.html",
+  directives: [For]
 })
 
 class ColorWar {

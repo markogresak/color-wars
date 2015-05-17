@@ -1,2 +1,9 @@
-<h1>Hello {{ name }}</h1>
-<input #el  [value]="name" (keyup)="updateName(el.value)" />
+<table>
+
+  <tr *for="#line of tiles">
+
+    <td *for="#tile of line">({{tile.x}},{{tile.y}})</td>
+
+  </tr>
+
+</table>
