@@ -4,18 +4,17 @@
   <meta charset="UTF-8">
   <title>Color Wars</title>
   <link rel="stylesheet" href="/css/main.css">
-
-  <script src="/traceur/bin/traceur-runtime.js"></script>
-  <script src="/systemjs/dist/system.js"></script>
 </head>
 <body>
   <color-war></color-war>
+
+  <script src="/jspm_packages/github/jmcriffey/bower-traceur-runtime@0.0.88/traceur-runtime.min.js"></script>
+  <script src="/jspm_packages/system.js"></script>
+  <script src="/jspm-config.js"></script>
+  <script src="/js/angular2.dev.js"></script>
+
   <script>
-    System.paths = {
-      "angular2/*": "/angular2/*.js",
-      "rtts_assert/*": "/rtts_assert/*.js"
-    };
-    System.register("./js/app");
+    System.import("./js/app");
   </script>
 </body>
 </html>
