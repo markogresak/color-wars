@@ -19,15 +19,10 @@
   },
   "homepage": "https://github.com/markogresak/color-wars",
   "dependencies": {
-    "angular2": "^2.0.0-alpha.20",
     "errorhandler": "^1.3.5",
-    "es6-module-loader": "^0.16.5",
     "express": "^4.12.3",
     "normalize.css": "^3.0.3",
-    "rtts_assert": "^2.0.0-alpha.20",
     "socket.io": "^1.3.5",
-    "systemjs": "^0.16.9",
-    "traceur": "0.0.89",
     "typescript": "^1.5.0-beta"
   },
   "devDependencies": {
@@ -55,9 +50,7 @@
       "baseURL": "dist/public"
     },
     "configFile": "dist/public/jspm-config.js",
-    "dependencies": {
-      "angular2": "github:robianmcd/angular-next@^0.0.3"
-    },
+    "dependencies": {},
     "devDependencies": {
       "traceur": "github:jmcriffey/bower-traceur@0.0.88",
       "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88"
