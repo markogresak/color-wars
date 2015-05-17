@@ -7,7 +7,7 @@ import {Component, View, bootstrap} from "angular2/angular2";
 })
 
 @View({
-  templateUrl: "app.html"
+  templateUrl: "color-war.html"
 })
 
 class ColorWar {
@@ -18,7 +18,7 @@ class ColorWar {
     this.name = "Marko";
   }
 
-  updateName(name) {
+  updateName(name: string) {
     this.name = name;
   }
 
