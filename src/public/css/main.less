@@ -43,6 +43,50 @@ body {
   width: 100%;
   height: @size;
   margin: 4px 0;
+  &:nth-child(2n) {
+    .cell.active:nth-child(5n),
+    .cell:hover:nth-child(5n) {
+      background: @player1;
+    }
+    .cell.active:nth-child(5n + 1),
+    .cell:hover:nth-child(5n + 1) {
+      background: @player2;
+    }
+    .cell.active:nth-child(5n + 2),
+    .cell:hover:nth-child(5n + 2) {
+      background: @player3;
+    }
+    .cell.active:nth-child(5n + 3),
+    .cell:hover:nth-child(5n + 3) {
+      background: @player4;
+    }
+    .cell.active:nth-child(5n + 4),
+    .cell:hover:nth-child(5n + 4) {
+      background: @player5;
+    }
+  }
+  &:nth-child(2n + 1) {
+    .cell.active:nth-child(5n),
+    .cell:hover:nth-child(5n) {
+      background: @player5;
+    }
+    .cell.active:nth-child(5n + 1),
+    .cell:hover:nth-child(5n + 1) {
+      background: @player1;
+    }
+    .cell.active:nth-child(5n + 2),
+    .cell:hover:nth-child(5n + 2) {
+      background: @player2;
+    }
+    .cell.active:nth-child(5n + 3),
+    .cell:hover:nth-child(5n + 3) {
+      background: @player3;
+    }
+    .cell.active:nth-child(5n + 4),
+    .cell:hover:nth-child(5n + 4) {
+      background: @player4;
+    }
+  }
 }
 .cell {
   width: @size;
