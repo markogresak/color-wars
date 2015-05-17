@@ -73,5 +73,6 @@ gulp.task("rebuild", ["clean", "build"]);
 gulp.task("default", ["build", "server"], () => {
   gulp.watch(staticPaths, ["copy-static"]);
   gulp.watch(lessPath, ["less"]);
+  gulp.watch(tsPublicPath, ["typescript"]);
   gulp.watch(tsServerPath, [server.start]);
 });
