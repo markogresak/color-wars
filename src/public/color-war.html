@@ -1,9 +1,11 @@
-<table>
+<div class="platform">
 
-  <tr *for="#line of tiles">
+  <div class="row" *for="#line of tiles">
 
-    <td *for="#tile of line">({{tile.x}},{{tile.y}})</td>
+    <span class="cell" *for="#tile of line">
+      <!-- ({{tile.x}},{{tile.y}}) -->
+    </span>
 
-  </tr>
+  </div>
 
-</table>
+</div>
