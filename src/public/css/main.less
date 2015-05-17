@@ -1,6 +1,61 @@
 @import (inline) "../../../node_modules/normalize.css/normalize.css";
-
+@size: 80px;
+@player1: #f44336;
+@player2: #9c27b0;
+@player3: #2196f3;
+@player4: #4caf50;
+@player5: #ffc107;
+@player-colors: @player1, @player2, @player3, @player4, @player5;
+.shadow-z-1 {
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
+}
+.shadow-z-1-hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.shadow-z-2 {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.shadow-z-3 {
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.shadow-z-4 {
+  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+}
+.shadow-z-5 {
+  box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+}
+.size-100 {
+  width: 100%;
+  height: 100%;
+}
 body {
-  background: #000;
-  color: #eee;
+  .size-100();
+  max-width: 100%;
+  max-height: 100%;
+  background: #b0bec5;
+}
+.platform {
+  padding: 20px;
+  .size-100();
+  text-align: center;
+}
+.row {
+  width: 100%;
+  height: @size;
+  margin: 4px 0;
+}
+.cell {
+  width: @size;
+  height: @size;
+  display: inline-block;
+  margin: 2px;
+  background: #fafafa;
+  cursor: pointer;
+  .shadow-z-1();
+  &:not(.active):hover {
+    .shadow-z-3();
+  }
+  &.active {
+    cursor: not-allowed;
+  }
 }
