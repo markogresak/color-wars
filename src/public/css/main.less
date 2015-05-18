@@ -1,104 +1,77 @@
 @import (inline) "../../../node_modules/normalize.css/normalize.css";
-@size: 80px;
-@player1: #f44336;
-@player2: #9c27b0;
-@player3: #2196f3;
-@player4: #4caf50;
-@player5: #ffc107;
-@player-colors: @player1, @player2, @player3, @player4, @player5;
-.shadow-z-1 {
-  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
-}
-.shadow-z-1-hover {
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-}
-.shadow-z-2 {
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.shadow-z-3 {
-  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-.shadow-z-4 {
-  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
-}
-.shadow-z-5 {
-  box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
-}
-.size-100 {
-  width: 100%;
-  height: 100%;
-}
+@import "./row-colors.less";
+@import "./shadow-mixins.less";
+
+@player-colors: #f44336, #9c27b0, #2196f3, #4caf50, #ffc107;
+@page-color: #b0bec5;
+
+@size: 60px;
+
 body {
-  .size-100();
-  max-width: 100%;
-  max-height: 100%;
-  background: #b0bec5;
+  background: @page-color;
 }
-.platform {
+
+.stats, .platform {
   padding: 20px;
-  .size-100();
   text-align: center;
 }
-.row {
-  width: 100%;
-  height: @size;
-  margin: 4px 0;
-  &:nth-child(2n) {
-    .cell.active:nth-child(5n),
-    .cell:hover:nth-child(5n) {
-      background: @player1;
-    }
-    .cell.active:nth-child(5n + 1),
-    .cell:hover:nth-child(5n + 1) {
-      background: @player2;
-    }
-    .cell.active:nth-child(5n + 2),
-    .cell:hover:nth-child(5n + 2) {
-      background: @player3;
-    }
-    .cell.active:nth-child(5n + 3),
-    .cell:hover:nth-child(5n + 3) {
-      background: @player4;
-    }
-    .cell.active:nth-child(5n + 4),
-    .cell:hover:nth-child(5n + 4) {
-      background: @player5;
-    }
+
+.percentage {
+  width: (@size * 10 + 40px);
+  height: (@size * 0.75);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+
+
+  div {
+    position: absolute;
+    top: 0;
+    height: 100%;
   }
-  &:nth-child(2n + 1) {
-    .cell.active:nth-child(5n),
-    .cell:hover:nth-child(5n) {
-      background: @player5;
-    }
-    .cell.active:nth-child(5n + 1),
-    .cell:hover:nth-child(5n + 1) {
-      background: @player1;
-    }
-    .cell.active:nth-child(5n + 2),
-    .cell:hover:nth-child(5n + 2) {
-      background: @player2;
-    }
-    .cell.active:nth-child(5n + 3),
-    .cell:hover:nth-child(5n + 3) {
-      background: @player3;
-    }
-    .cell.active:nth-child(5n + 4),
-    .cell:hover:nth-child(5n + 4) {
-      background: @player4;
-    }
+
+  .p1 {
+    z-index: 5;
+    background:(extract(@player-colors, 1));
+    width: 10%;
+  }
+  .p2 {
+    z-index: 4;
+    background:(extract(@player-colors, 2));
+    width: 30%;
+  }
+  .p3 {
+    z-index: 3;
+    background:(extract(@player-colors, 3));
+    width: 65%;
+  }
+  .p4 {
+    z-index: 2;
+    background:(extract(@player-colors, 4));
+    width: 80%;
+  }
+  .p5 {
+    z-index: 1;
+    background:(extract(@player-colors, 5));
+    width: 100%;
   }
 }
+
 .cell {
+  display: inline-block;
   width: @size;
   height: @size;
-  display: inline-block;
-  margin: 2px;
+  margin: 0px 2px;
+
   background: #fafafa;
   cursor: pointer;
-  .shadow-z-1();
+
+  transition: background-color 0.2s ease, box-shadow 0.5s cubic-bezier(.4, 0, .2, 1);
+
   &:not(.active):hover {
-    .shadow-z-3();
+    .shadow-z-1-hover();
   }
+
   &.active {
     cursor: not-allowed;
   }
