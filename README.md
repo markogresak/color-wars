@@ -1,3 +1,2 @@
-# Color Wars
+# Color Wars [![Build Status](https://travis-ci.org/markogresak/color-wars.svg?branch=master)](https://travis-ci.org/markogresak/color-wars)
 
-[![Build Status](https://travis-ci.org/markogresak/color-wars.svg?branch=master)](https://travis-ci.org/markogresak/color-wars)
