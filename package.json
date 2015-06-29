@@ -37,6 +37,7 @@
     "gulp-plumber": "^1.0.0",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-tslint": "^2.0.0",
+    "jspm": "^0.15.6",
     "karma": "^0.12.31",
     "karma-chai": "^0.1.0",
     "karma-mocha": "^0.1.10",
