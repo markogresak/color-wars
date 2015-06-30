@@ -6,7 +6,8 @@
   "scripts": {
     "test": "gulp test",
     "postinstall": "npm run-script tsd && ./node_modules/typescript/bin/tsc gulpfile.ts -m commonjs",
-    "tsd": "./node_modules/tsd/build/cli.js reinstall --overwrite --save"
+    "tsd": "./node_modules/tsd/build/cli.js reinstall --overwrite --save",
+    "jspm": "./node_modules/jspm/jspm.js install"
   },
   "repository": {
     "type": "git",
