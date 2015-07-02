@@ -3,6 +3,7 @@
 var gulp = require("gulp");
 var browserSync = require("browser-sync");
 var p = require("gulp-load-plugins")();
+var exec = require('child_process').exec;
 
 var publicPath = "src/public/**/";
 var distPath = "dist/"
@@ -52,6 +53,10 @@ gulp.task("copy-static", () => {
     .pipe(browserSync.reload({ stream: true }));
 });
 
+gulp.task("jspm-install", () => {
+  exec("./node_modules/jspm/jspm.js install");
+})
+
 gulp.task("server", () => {
   server.start();
   browserSync.init({
@@ -66,7 +71,7 @@ gulp.task("clean", () => {
     .pipe(p.clean());
 });
 
-gulp.task("build", ["typescript", "less", "copy-static"]);
+gulp.task("build", ["typescript", "less", "copy-static", "jspm-install"]);
 
 gulp.task("rebuild", ["clean", "build"]);
 
