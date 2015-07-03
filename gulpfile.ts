@@ -32,7 +32,7 @@ gulp.task("test", ["tslint"], () => {
 
 gulp.task("typescript", () => {
   // Hack until `gulp-typescript` supports projects.
-  require('child_process').exec("./node_modules/typescript/bin/tsc -p .");
+  exec("./node_modules/typescript/bin/tsc -p .");
 });
 
 gulp.task("less", () => {
