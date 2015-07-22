@@ -5,6 +5,8 @@ cache:
   directories:
   - node_modules
   - typings
+before_script:
+  - time git clone https://github.com/borisyankov/DefinitelyTyped
 env:
   global:
   - secure: PGUEuJV+zIPBWZRQRMh7DY3sWQrM0EiuEw04JGnVFim1xbEnO0qJ1olMk4Gbfh3SCxIufW0KFwSDVyaVhe3i/1S5SBQOXcNpCgByCP65kk8q0uu0/DzylX4tyVRxU6gDsR54xi3TUwOpLKjFP/nKZ3Sy7vMLbnSG+pGvexwQx4k=
